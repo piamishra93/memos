@@ -192,9 +192,16 @@ const memo: Memo = {
       {
         category: "Product",
         risk:
-          "OE's value proposition is anchored in trust. Any meaningful degradation in data quality or sourcing — or perception thereof — creates a real risk of a zero outcome. The ad-based business model requires careful calibration to avoid conflicts that undermine clinical credibility.",
+          "OE's value proposition is anchored in trust. Any meaningful degradation in data quality or sourcing — or perception thereof — creates a real risk of a zero outcome.",
         mitigant:
           "The specialised medical dataset is the underpinning of every product they build and their primary differentiator. Maintaining data quality is not a feature priority — it is the company.",
+      },
+      {
+        category: "Business model",
+        risk:
+          "Pharma advertising is OE's primary revenue source today — creating a structural tension with the clinical objectivity the product depends on. A perceived conflict between ad incentives and clinical recommendations could erode physician trust rapidly and irreversibly.",
+        mitigant:
+          "OE has clear paths to reduce ad dependency — consult-based subscriptions and CME monetisation both scale with usage and carry no inherent conflict. As these legs grow, reliance on pharma advertising naturally declines.",
       },
       {
         category: "Competition",
