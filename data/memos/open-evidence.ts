@@ -208,7 +208,7 @@ const memo: Memo = {
         risk:
           "If frontier labs invest heavily in medical training, they may not achieve 100% accuracy but could get close enough that general-purpose tools become acceptable substitutes — particularly if priced aggressively or bundled with existing enterprise contracts.",
         mitigant:
-          "By the time lab datasets are competitive, OE will be embedded in physician workflows and hospital systems at a depth that makes switching costs prohibitive. Epic integration and the Mount Sinai deal are early signals of deepening integration. Sora deprioritization is an example of labs hitting their own execution limits.",
+          "By the time lab datasets are competitive, OE will be embedded in workflows such that switching costs become very high. Epic integration and the Mount Sinai deal are early signals of deepening integration. Sora deprioritization is an example of labs hitting their own execution limits.",
       },
       {
         category: "GTM",
