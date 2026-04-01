@@ -246,18 +246,24 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
               highlight={consultScalar !== 1.0 || physicianScalar !== 1.0}
             />
             <Row
-              label="CME revenue"
-              values={rows.map((r) => fmtRevM(r.cmeRev))}
-            />
-            <Row
               label="Advertising revenue"
               values={rows.map((r) => fmtRevM(r.adRev))}
+            />
+            <Row
+              label="CME revenue"
+              values={rows.map((r) => fmtRevM(r.cmeRev))}
             />
             <Row
               label="Total ARR"
               values={rows.map((r) => fmtRevM(r.totalARR))}
               bold
               border
+            />
+            <Row
+              label="ARR growth"
+              values={rows.map((r, i) =>
+                i === 0 ? "—" : `${Math.round((r.totalARR / rows[i - 1].totalARR - 1) * 100)}%`
+              )}
             />
 
             {/* Valuation */}
