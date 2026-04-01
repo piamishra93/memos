@@ -120,8 +120,8 @@ const memo: Memo = {
           reasonToWin: "Early research shows smaller, highly-specialised models trained on in-domain medical data outperform larger general models on clinical accuracy.",
         },
         {
-          category: "AI-native tools",
-          competitors: "Abridge",
+          category: "AI documentation",
+          competitors: "Abridge, Nuance DAX, Suki",
           reasonToWin: "Positioned as the clinical co-pilot, not the transcriber — broader bottoms-up affinity and a more natural expansion motion into workflow ownership.",
         },
       ],
