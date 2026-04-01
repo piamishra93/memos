@@ -69,13 +69,13 @@ const memo: Memo = {
         {
           label: "EHR displacement",
           blocks: [
-            { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (notes) and Doctor Dialer (telemedicine), it will expand $ per physician toward the ~$20K/year currently captured by EHR vendors." },
+            { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (notes) and Doctor Dialer (telemedicine), it will expand $ per physician toward the **~$20K/year** currently captured by EHR vendors." },
           ],
         },
         {
           label: "Malpractice upside",
           blocks: [
-            { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability — the average medical malpractice settlement is ~$425K." },
+            { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability — the average medical malpractice settlement is **~$425K**." },
           ],
         },
       ],

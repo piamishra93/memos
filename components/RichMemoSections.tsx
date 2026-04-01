@@ -233,7 +233,7 @@ function SubCard({ label, blocks }: { label: string; blocks: ContentBlock[] }) {
           <p key={i} className="font-serif text-sm leading-relaxed text-ink/80">
             {block.text.split(/(\*\*[^*]+\*\*)/).map((part, j) =>
               part.startsWith("**") ? (
-                <strong key={j} className="font-semibold text-ink">{part.slice(2, -2)}</strong>
+                <strong key={j} className="font-semibold text-ink/90">{part.slice(2, -2)}</strong>
               ) : part
             )}
           </p>
