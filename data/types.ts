@@ -39,6 +39,10 @@ export interface Memo {
   richContent?: RichMemoContent;
 }
 
+export type ContentBlock =
+  | { type: "text"; text: string }
+  | { type: "list"; items: string[] };
+
 export interface RichMemoContent {
   thesis: {
     overview: string;
@@ -48,10 +52,10 @@ export interface RichMemoContent {
     keyStats: { label: string; value: string }[];
   };
   market: {
-    samTopDown: string;
-    samBottomUp: string;
-    tamTopDown: string;
-    tamBottomUp: string;
+    samTopDown: ContentBlock[];
+    samBottomUp: ContentBlock[];
+    tamTopDown: ContentBlock[];
+    tamBottomUp: ContentBlock[];
     tailwinds: string[];
     competition: { category: string; competitors: string; reasonToWin: string }[];
     gtm: string;

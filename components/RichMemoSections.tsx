@@ -1,4 +1,4 @@
-import { RichMemoContent } from "@/data/types";
+import { RichMemoContent, ContentBlock } from "@/data/types";
 
 export function ThesisSection({ data }: { data: RichMemoContent["thesis"] }) {
   return (
@@ -36,8 +36,8 @@ export function MarketSection({ data }: { data: RichMemoContent["market"] }) {
         <div>
           <Subhead>Top-down sizing</Subhead>
           <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
-            <SizeCard label="SAM" body={data.samTopDown} />
-            <SizeCard label="TAM" body={data.tamTopDown} />
+            <SizeCard label="SAM" blocks={data.samTopDown} />
+            <SizeCard label="TAM" blocks={data.tamTopDown} />
           </div>
         </div>
 
@@ -45,8 +45,8 @@ export function MarketSection({ data }: { data: RichMemoContent["market"] }) {
         <div>
           <Subhead>Bottom-up sizing</Subhead>
           <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
-            <SizeCard label="SAM" body={data.samBottomUp} />
-            <SizeCard label="TAM" body={data.tamBottomUp} />
+            <SizeCard label="SAM" blocks={data.samBottomUp} />
+            <SizeCard label="TAM" blocks={data.tamBottomUp} />
           </div>
         </div>
 
@@ -213,11 +213,24 @@ function Subhead({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SizeCard({ label, body }: { label: string; body: string }) {
+function SizeCard({ label, blocks }: { label: string; blocks: ContentBlock[] }) {
   return (
-    <div className="border border-ink/10 p-4 space-y-2">
+    <div className="border border-ink/10 p-4 space-y-3">
       <p className="font-mono text-xs text-muted tracking-widest uppercase">{label}</p>
-      <p className="font-serif text-sm leading-relaxed text-ink/80">{body}</p>
+      {blocks.map((block, i) =>
+        block.type === "text" ? (
+          <p key={i} className="font-serif text-sm leading-relaxed text-ink/80">{block.text}</p>
+        ) : (
+          <ul key={i} className="space-y-1">
+            {block.items.map((item, j) => (
+              <li key={j} className="flex gap-2">
+                <span className="font-mono text-xs text-muted shrink-0 mt-0.5">—</span>
+                <span className="font-serif text-sm leading-relaxed text-ink/80">{item}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      )}
     </div>
   );
 }
