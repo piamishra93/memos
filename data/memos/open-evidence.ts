@@ -120,12 +120,14 @@ const memo: Memo = {
           role: "CEO",
           description:
             "PhD, Harvard (Political Economy). Second-time founder — his first company, Kensho, applied AI to financial services and was acquired by S&P Global. Has intentionally built a technically rigorous, academically oriented culture at OE, which is central to the product's credibility.",
+          linkedin: "https://www.linkedin.com/in/danielnadler",
         },
         {
           name: "Zach Ziegler",
           role: "CTO",
           description:
             "PhD, Harvard (Machine Learning). Deep technical pedigree in the domain — brings the ML depth required to maintain OpenEvidence's edge in specialised model performance.",
+          linkedin: "https://www.linkedin.com/in/zachary-ziegler-1328a6126/",
         },
       ],
       footnote: "<50 FTE on a $50M+ ARR base.",

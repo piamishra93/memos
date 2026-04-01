@@ -62,7 +62,7 @@ export interface RichMemoContent {
   };
   team: {
     overview: string;
-    members: { name: string; role: string; description: string }[];
+    members: { name: string; role: string; description: string; linkedin?: string }[];
     footnote: string;
   };
   risks: { category: string; risk: string; mitigant: string }[];
