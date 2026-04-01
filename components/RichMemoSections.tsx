@@ -142,30 +142,26 @@ export function TeamSection({ data }: { data: RichMemoContent["team"] }) {
       <div className="pl-8 space-y-6">
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.overview}</p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {data.members.map((m) => {
-            const inner = (
-              <>
-                <div>
-                  <p className="font-mono text-xs text-muted tracking-widest uppercase">{m.role}</p>
-                  <p className="font-serif text-xl font-medium mt-1">{m.name}</p>
-                </div>
-                <p className="font-serif text-sm leading-relaxed text-ink/70">{m.description}</p>
-                {m.linkedin && (
-                  <p className="font-mono text-xs text-muted tracking-widest uppercase">LinkedIn ↗</p>
-                )}
-              </>
-            );
-            return m.linkedin ? (
-              <a key={m.name} href={m.linkedin} target="_blank" rel="noopener noreferrer"
-                className="border border-ink/10 p-5 space-y-3 block hover:border-ink/30 transition-colors">
-                {inner}
-              </a>
-            ) : (
-              <div key={m.name} className="border border-ink/10 p-5 space-y-3">{inner}</div>
-            );
-          })}
+          {data.members.map((m) => (
+            <div key={m.name} className="border border-ink/10 p-5 space-y-3">
+              <div>
+                <p className="font-mono text-xs text-muted tracking-widest uppercase">{m.role}</p>
+                <p className="font-serif text-xl font-medium mt-1">{m.name}</p>
+              </div>
+              <p className="font-serif text-sm leading-relaxed text-ink/70">{m.description}</p>
+              {m.linkedin && (
+                <a href={m.linkedin} target="_blank" rel="noopener noreferrer"
+                  className="font-mono text-xs text-muted tracking-widest uppercase hover:text-ink transition-colors block">
+                  LinkedIn ↗
+                </a>
+              )}
+            </div>
+          ))}
         </div>
-        <p className="font-mono text-xs text-muted">{data.footnote}</p>
+        <a href="https://www.linkedin.com/company/openevidence/people/" target="_blank" rel="noopener noreferrer"
+          className="font-mono text-xs text-muted hover:text-ink transition-colors block">
+          {data.footnote} ↗
+        </a>
       </div>
     </section>
   );
