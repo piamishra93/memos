@@ -5,7 +5,7 @@ const memo: Memo = {
   slug: "open-evidence",
   company: "OpenEvidence",
   tagline: "The AI layer for clinical decision-making.",
-  date: "March 2026",
+  date: "April 2026",
   sector: "Healthcare AI",
   stage: "Growth",
   website: "https://openevidence.com",
