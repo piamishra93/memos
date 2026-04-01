@@ -143,15 +143,15 @@ export function TeamSection({ data }: { data: RichMemoContent["team"] }) {
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.overview}</p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {data.members.map((m) => (
-            <div key={m.name} className="border border-ink/10 p-5 space-y-3">
+            <div key={m.name} className="border border-ink/10 p-5 flex flex-col gap-3">
               <div>
                 <p className="font-mono text-xs text-muted tracking-widest uppercase">{m.role}</p>
                 <p className="font-serif text-xl font-medium mt-1">{m.name}</p>
               </div>
-              <p className="font-serif text-sm leading-relaxed text-ink/70">{m.description}</p>
+              <p className="font-serif text-sm leading-relaxed text-ink/70 flex-1">{m.description}</p>
               {m.linkedin && (
                 <a href={m.linkedin} target="_blank" rel="noopener noreferrer"
-                  className="font-mono text-xs text-muted tracking-widest uppercase hover:text-ink transition-colors block">
+                  className="font-mono text-xs text-muted tracking-widest uppercase hover:text-ink transition-colors block mt-auto">
                   LinkedIn ↗
                 </a>
               )}
