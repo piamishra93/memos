@@ -46,13 +46,7 @@ const memo: Memo = {
         {
           label: "Existing budget",
           blocks: [
-            { type: "text", text: "OpenEvidence's current product suite draws from existing budgets for:" },
-            { type: "list", items: [
-              "Medical training refresher courses",
-              "Conference attendance",
-              "Subscriptions to medical databases",
-              "Subscriptions to medical journals",
-            ]},
+            { type: "text", text: "OpenEvidence's current product suite draws from existing physician budgets for continuing education — courses, conferences, journal subscriptions, and clinical databases." },
             { type: "text", text: "This represents about **$6B** of spend, growing ~11% over next 5 years." },
           ],
         },
