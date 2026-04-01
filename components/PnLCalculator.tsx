@@ -222,7 +222,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
             />
 
             {/* Volume */}
-            <SectionLabel label="Volume & pricing" />
+            <SectionLabel label="Consult-driven revenue" />
             <Row
               label="Consults covered"
               values={rows.map((r) => fmtConsults(r.consultsMM))}
@@ -239,9 +239,9 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
             />
 
             {/* Revenue */}
-            <SectionLabel label="Revenue" />
+            <SectionLabel label="Total revenue" />
             <Row
-              label="Consult revenue"
+              label="Consult-driven revenue"
               values={rows.map((r) => fmtRevM(r.consultRev))}
               highlight={consultScalar !== 1.0 || physicianScalar !== 1.0}
             />
