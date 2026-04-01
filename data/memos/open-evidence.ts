@@ -111,7 +111,7 @@ const memo: Memo = {
         },
         {
           category: "CME ($5K / physician)",
-          competitors: "Academic conferences, UCSF / institutional courses",
+          competitors: "Institutional courses (e.g. UCSF)",
           reasonToWin: "OE offers productised, on-demand learning paths — no travel, no scheduling friction.",
         },
         {
