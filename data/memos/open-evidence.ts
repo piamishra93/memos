@@ -64,6 +64,12 @@ const memo: Memo = {
             { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
           ],
         },
+        {
+          label: "Consult volume",
+          blocks: [
+            { type: "text", text: "Doctors typically run **50–100 consults per week** — roughly **2.5K–5K per year**. OE sits at the point of care for each one." },
+          ],
+        },
       ],
       tamTopDown: [
         {
@@ -81,10 +87,15 @@ const memo: Memo = {
       ],
       tamBottomUp: [
         {
-          label: "Global & adjacent",
+          label: "Global expansion",
           blocks: [
-            { type: "text", text: "Clear interest from UK and European physicians — ~12M physicians globally represents a 12x expansion on the current US addressable base." },
-            { type: "text", text: "Adjacent user groups add further scale: nurses, PAs, medical students, pharmacists. There are ~5M nurses in the US alone." },
+            { type: "text", text: "Clear interest from UK and European physicians — **~12M physicians globally** represents a 12x expansion on the current US addressable base." },
+          ],
+        },
+        {
+          label: "Adjacent users",
+          blocks: [
+            { type: "text", text: "Nurses, PAs, medical students, and pharmacists add further scale. There are **~5M nurses** in the US alone." },
           ],
         },
       ],
