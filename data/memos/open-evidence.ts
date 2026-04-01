@@ -201,7 +201,7 @@ const memo: Memo = {
         risk:
           "Pharma advertising is OE's primary revenue source today — creating a structural tension with the clinical objectivity the product depends on. A perceived conflict between ad incentives and clinical recommendations could erode physician trust rapidly and irreversibly.",
         mitigant:
-          "OE has clear paths to reduce ad dependency — consult-based subscriptions and CME monetisation both scale with usage and carry no inherent conflict. As these legs grow, reliance on pharma advertising naturally declines.",
+          "OE has clear paths to reduce ad dependency — consult-based subscriptions and CME monetization both scale with usage and carry no inherent conflict. As these legs grow, reliance on pharma advertising naturally declines.",
       },
       {
         category: "Competition",
