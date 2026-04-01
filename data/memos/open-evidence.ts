@@ -44,7 +44,7 @@ const memo: Memo = {
 
     market: {
       samTopDown:
-        "Existing physician spend OE is pulling today: medical training refresher courses, conference attendance, subscriptions to medical databases and journals. This represents ~$6B of addressable spend, growing ~11% over the next five years. OE also monetises pharma advertising — a ~$14B US-only budget.",
+        "OpenEvidence's current product suite draws from existing budgets for: medical training refresher courses, conference attendance, subscriptions to medical databases, and subscriptions to medical journals. This represents about $6B of spend, growing ~11% over next 5 years. OpenEvidence also monetizes off of ad spend from pharmaceutical companies. The total budget (US only) is about $14B.",
       samBottomUp:
         "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform — a remarkable organic penetration rate for a product with no enterprise sales motion.",
       tamTopDown:
