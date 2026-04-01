@@ -12,15 +12,13 @@ export default function Home() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-ink/10 mb-10" />
-
       {/* Memo list */}
       <ul className="space-y-0">
         {memos.map((memo, i) => (
           <li key={memo.slug}>
             <Link
               href={`/memo/${memo.slug}`}
-              className="group flex items-center justify-between py-8 border-b border-ink/10 hover:border-ink/30 transition-colors"
+              className="group flex items-center justify-between py-8 border-t border-b border-ink/10 hover:border-ink/20 transition-colors"
             >
               <div className="flex items-start gap-6">
                 <span className="font-mono text-xs text-muted mt-1 w-5 shrink-0">
