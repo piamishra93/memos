@@ -204,7 +204,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
           <tbody className="font-mono text-sm">
 
             {/* Physicians */}
-            <SectionLabel label="Physicians" />
+            <SectionLabel label="Adoption" />
             <Row
               label="Licensed physicians"
               values={rows.map((r) => fmtK(r.licensed))}
