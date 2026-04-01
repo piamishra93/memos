@@ -58,7 +58,7 @@ export default async function MemoPage({
       {/* Back arrow — fixed top left */}
       <Link
         href="/"
-        className="fixed top-6 left-6 font-mono text-sm text-muted hover:text-ink transition-colors"
+        className="fixed top-5 left-6 font-mono text-2xl text-muted hover:text-ink transition-colors"
       >
         ←
       </Link>
@@ -80,7 +80,7 @@ export default async function MemoPage({
       {rc ? (
         <>
           <div className="border-t border-ink/10 mb-4" />
-          <nav className="flex flex-wrap items-center gap-x-3 font-mono text-xs tracking-widest uppercase text-muted mb-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-3 font-mono text-xs tracking-widest uppercase text-muted mb-4">
             {RICH_NAV.map((s, i) => (
               <>
                 {i > 0 && <span key={`dot-${i}`} className="text-ink/20">·</span>}
