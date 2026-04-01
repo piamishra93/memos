@@ -44,6 +44,7 @@ export interface RichMemoContent {
     overview: string;
     growthPath: string;
     whyNow: string;
+    team: string;
     keyStats: { label: string; value: string }[];
   };
   market: {

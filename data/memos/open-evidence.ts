@@ -27,11 +27,13 @@ const memo: Memo = {
   richContent: {
     thesis: {
       overview:
-        "OpenEvidence is using PLG as a wedge in a regulated market: a free, high-trust, daily-use clinician Q&A product makes the enterprise motion a follow-on conversation, not a long sell. The ad-supported Q&A is the starting point; the goal is deeper workflow penetration — a Notion-like consumer-love to expansion dynamic, inside one of the hardest-to-disrupt industries in the world.",
+        "OpenEvidence is using PLG as a wedge in a regulated market: a free, high-trust, daily-use clinician Q&A product makes the enterprise motion a follow-on conversation, not a long sell. The ad-supported Q&A is the starting point; the goal is deeper workflow penetration (Notion-like consumer-love → expansion dynamic).",
       growthPath:
-        "The growth path pairs the Q&A product (source of truth) with an AI scribe to become a high-fidelity system of record — capturing a meaningful share of the ~$10K/physician/year currently spent on EHR infrastructure.",
+        "Pair Q&A product (source of truth) with an AI scribe to become a high-fidelity system of record, capturing part of the ~$10K / physician / year EHR spend.",
       whyNow:
-        "Healthcare is hard to disrupt precisely because trust protected incumbents. OE's early traction (~1M consults/day as of March 2026) and Epic-embedded deployments at institutions like Mount Sinai suggest a credible break-out driven by bottoms-up distribution — the kind that doesn't need a CIO's signature to start.",
+        "LLMs crossed a threshold where real-time, high accuracy, clinical reasoning is possible. Healthcare has been hard to disrupt because need for accurate data, and high trust, was paramount — this protected incumbents. OE's early traction and recent enterprise deployments suggest a credible break-out driven by product innovation and bottoms up distribution.",
+      team:
+        "Daniel is a repeat founder (Kensho) and has intentionally built a technically rigorous, academically oriented execution culture — which is crucial for OpenEvidence credibility.",
       keyStats: [
         { label: "Consults / day", value: "~1M" },
         { label: "US physician penetration", value: "~40%" },

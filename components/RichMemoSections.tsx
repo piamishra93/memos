@@ -20,6 +20,8 @@ export function ThesisSection({ data }: { data: RichMemoContent["thesis"] }) {
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.growthPath}</p>
         <Subhead>Why now</Subhead>
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.whyNow}</p>
+        <Subhead>Team</Subhead>
+        <p className="font-serif text-base leading-relaxed text-ink/80">{data.team}</p>
       </div>
     </section>
   );
