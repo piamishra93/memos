@@ -62,7 +62,6 @@ const memo: Memo = {
           label: "US physician base",
           blocks: [
             { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
-            { type: "text", text: "A remarkable organic penetration rate for a product with no enterprise sales motion." },
           ],
         },
       ],
