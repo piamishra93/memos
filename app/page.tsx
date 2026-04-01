@@ -6,10 +6,7 @@ export default function Home() {
     <main className="max-w-2xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="mb-16">
-        <h1
-          className="font-serif text-6xl font-medium leading-tight"
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
+        <h1 className="font-mono text-3xl font-medium tracking-widest uppercase">
           Investment Memos
         </h1>
       </div>
