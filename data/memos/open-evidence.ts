@@ -61,7 +61,7 @@ const memo: Memo = {
         {
           label: "US physician base",
           blocks: [
-            { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
+            { type: "text", text: "There are just over **1M** licensed physicians in the US. As of mid-2025, **~40%** were active on the OE Q&A platform." },
           ],
         },
         {
@@ -89,7 +89,7 @@ const memo: Memo = {
         {
           label: "Global expansion",
           blocks: [
-            { type: "text", text: "Clear interest from UK and European physicians — **~12M physicians globally** represents a 12x expansion on the current US addressable base." },
+            { type: "text", text: "Existing interest from European physicians — **~12M** licensed practitioners globally demonstrates meaningful upside to US base." },
           ],
         },
         {
