@@ -33,6 +33,15 @@ const SIMPLE_SECTIONS = [
   { key: "team", label: "Team" },
 ] as const;
 
+const RICH_NAV = [
+  { id: "thesis", label: "Thesis" },
+  { id: "market", label: "Market" },
+  { id: "product", label: "Product" },
+  { id: "team", label: "Team" },
+  { id: "returns", label: "Returns" },
+  { id: "risks", label: "Risks" },
+];
+
 export default async function MemoPage({
   params,
 }: {
@@ -43,7 +52,6 @@ export default async function MemoPage({
   if (!memo) notFound();
 
   const rc = memo.richContent;
-  const returnsNumber = rc ? "05" : "05";
 
   return (
     <main className="max-w-2xl mx-auto px-6 py-20">
@@ -56,12 +64,12 @@ export default async function MemoPage({
       </Link>
 
       {/* Header */}
-      <div className="mt-10 mb-12">
-        <p className="font-mono text-xs text-muted tracking-widest uppercase mb-3">
+      <div className="mt-10 mb-6">
+        <p className="font-mono text-xs text-muted tracking-widest uppercase mb-4">
           {memo.sector} · {memo.stage} · {memo.date}
         </p>
         <h1
-          className="font-serif text-5xl font-medium leading-tight mb-3 typewriter cursor"
+          className="font-serif text-5xl font-medium leading-tight mb-4 typewriter cursor"
           style={{ fontFamily: "var(--font-playfair)" }}
         >
           {memo.company}
@@ -71,11 +79,28 @@ export default async function MemoPage({
         </p>
       </div>
 
+      {/* Section nav — rich memos only */}
+      {rc && (
+        <nav className="flex flex-wrap items-center gap-x-3 font-mono text-xs tracking-widest uppercase text-muted mb-10">
+          {RICH_NAV.map((s, i) => (
+            <>
+              {i > 0 && <span key={`dot-${i}`} className="text-ink/20">·</span>}
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="hover:text-ink transition-colors"
+              >
+                {s.label}
+              </a>
+            </>
+          ))}
+        </nav>
+      )}
+
       <div className="border-t border-ink/10 mb-12" />
 
       <div className="space-y-16">
         {rc ? (
-          // ── Rich content path ──────────────────────────────────────────
           <>
             <ThesisSection data={rc.thesis} />
             <MarketSection data={rc.market} />
@@ -83,7 +108,6 @@ export default async function MemoPage({
             <TeamSection data={rc.team} />
           </>
         ) : (
-          // ── Simple string path (placeholder memos) ─────────────────────
           SIMPLE_SECTIONS.map(({ key, label }, i) => (
             <section key={key}>
               <div className="flex items-baseline gap-4 mb-4">
@@ -97,10 +121,10 @@ export default async function MemoPage({
           ))
         )}
 
-        {/* Returns — always present */}
-        <section>
+        {/* Returns */}
+        <section id="returns">
           <div className="flex items-baseline gap-4 mb-6">
-            <span className="font-mono text-xs text-muted">{returnsNumber}</span>
+            <span className="font-mono text-xs text-muted">05</span>
             <h2 className="font-serif text-2xl font-medium">Returns</h2>
           </div>
           <div className="pl-8">
@@ -120,7 +144,6 @@ export default async function MemoPage({
           </div>
         </section>
 
-        {/* Risks — only for rich content memos */}
         {rc && <RisksSection data={rc.risks} />}
       </div>
 

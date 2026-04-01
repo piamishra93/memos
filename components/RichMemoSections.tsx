@@ -2,7 +2,7 @@ import { RichMemoContent } from "@/data/types";
 
 export function ThesisSection({ data }: { data: RichMemoContent["thesis"] }) {
   return (
-    <section>
+    <section id="thesis" className="scroll-mt-8">
       <SectionHeader number="01" label="Thesis" />
       <div className="pl-8 space-y-8">
         {/* Key stats */}
@@ -27,7 +27,7 @@ export function ThesisSection({ data }: { data: RichMemoContent["thesis"] }) {
 
 export function MarketSection({ data }: { data: RichMemoContent["market"] }) {
   return (
-    <section>
+    <section id="market" className="scroll-mt-8">
       <SectionHeader number="02" label="Market" />
       <div className="pl-8 space-y-10">
         {/* SAM / TAM top-down */}
@@ -98,7 +98,7 @@ export function MarketSection({ data }: { data: RichMemoContent["market"] }) {
 
 export function ProductSection({ data }: { data: RichMemoContent["product"] }) {
   return (
-    <section>
+    <section id="product" className="scroll-mt-8">
       <SectionHeader number="03" label="Product" />
       <div className="pl-8 space-y-8">
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.overview}</p>
@@ -135,7 +135,7 @@ export function ProductSection({ data }: { data: RichMemoContent["product"] }) {
 
 export function TeamSection({ data }: { data: RichMemoContent["team"] }) {
   return (
-    <section>
+    <section id="team" className="scroll-mt-8">
       <SectionHeader number="04" label="Team" />
       <div className="pl-8 space-y-6">
         <p className="font-serif text-base leading-relaxed text-ink/80">{data.overview}</p>
@@ -171,7 +171,7 @@ export function TeamSection({ data }: { data: RichMemoContent["team"] }) {
 
 export function RisksSection({ data }: { data: RichMemoContent["risks"] }) {
   return (
-    <section>
+    <section id="risks" className="scroll-mt-8">
       <SectionHeader number="06" label="Risks" />
       <div className="pl-8">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
