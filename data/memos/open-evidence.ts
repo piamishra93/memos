@@ -67,7 +67,7 @@ const memo: Memo = {
         {
           label: "Consult volume",
           blocks: [
-            { type: "text", text: "Doctors typically run **50–100 consults per week** — roughly **2.5K–5K per year**. OE sits at the point of care for each one." },
+            { type: "text", text: "Doctors typically run **50–100 consults per week** — roughly **2.5K–5K per year**. OE can position itself as the go-to tool for consults." },
           ],
         },
       ],
