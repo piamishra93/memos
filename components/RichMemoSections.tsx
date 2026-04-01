@@ -171,22 +171,22 @@ export function RisksSection({ data }: { data: RichMemoContent["risks"] }) {
   return (
     <section id="risks" className="scroll-mt-8">
       <SectionHeader number="06" label="Risks" />
-      <div className="pl-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {data.map((r) => (
-            <div key={r.category} className="border border-ink/10 p-5 space-y-4">
-              <p className="font-mono text-xs text-muted tracking-widest uppercase">{r.category}</p>
+      <div className="pl-8 space-y-4">
+        {data.map((r) => (
+          <div key={r.category} className="border border-ink/10 p-5 space-y-4">
+            <p className="font-mono text-xs text-muted tracking-widest uppercase">{r.category}</p>
+            <div className="grid grid-cols-2 gap-6 border-t border-ink/10 pt-4">
               <div className="space-y-1">
                 <p className="font-mono text-xs text-muted">Risk</p>
                 <p className="font-serif text-sm leading-relaxed text-ink/80">{r.risk}</p>
               </div>
-              <div className="border-t border-ink/10 pt-4 space-y-1">
+              <div className="space-y-1">
                 <p className="font-mono text-xs text-muted">Mitigant</p>
                 <p className="font-serif text-sm leading-relaxed text-ink/80">{r.mitigant}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
