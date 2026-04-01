@@ -69,7 +69,7 @@ const memo: Memo = {
         {
           label: "EHR displacement",
           blocks: [
-            { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (AI transcribed note taking feature) and Doctor Dialer (AI facilitated telemedicine product), it can expand $ spend per physician and take some of **~$20K/year** currently captured by EHR vendors." },
+            { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (AI transcribed note taking feature) and Doctor Dialer (AI facilitated telemedicine product), it can expand $ spend per physician and take some of **~$20K/year** captured by EHRs." },
           ],
         },
         {
