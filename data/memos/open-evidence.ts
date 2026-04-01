@@ -110,7 +110,7 @@ const memo: Memo = {
           reasonToWin: "More robust, continuously updated data source — legacy tools are slow to incorporate new evidence.",
         },
         {
-          category: "Continuing medical education programs",
+          category: "Continuing medical education",
           competitors: "Institutional courses (e.g. UCSF)",
           reasonToWin: "OE offers productised, on-demand learning paths — no travel, no scheduling friction.",
         },
