@@ -151,7 +151,7 @@ const memo: Memo = {
         {
           title: "Expanding workflow surface",
           description:
-            "The Q&A product is the wedge. Note-taking and telemedicine products extend OE into the full patient encounter — creating stickiness that subscription databases can never replicate.",
+            "The Q&A product is the wedge. Note-taking and telemedicine products extend OE into the full patient encounter — creating stickiness that subscription databases can't replicate.",
         },
       ],
       moats: [
