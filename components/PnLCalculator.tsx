@@ -177,12 +177,13 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
                       : "text-muted"
                   }`}
                 >
-                  {y}
-                  {y === model.entryYear && (
-                    <span className="ml-1 text-muted normal-case">(entry)</span>
-                  )}
-                  {y === model.exitYear && (
-                    <span className="ml-1 text-muted normal-case">(exit)</span>
+                  <span className="block">{y}</span>
+                  {y === model.entryYear ? (
+                    <span className="block normal-case font-normal text-muted">entry</span>
+                  ) : y === model.exitYear ? (
+                    <span className="block normal-case font-normal text-muted">exit</span>
+                  ) : (
+                    <span className="block invisible">—</span>
                   )}
                 </th>
               ))}
