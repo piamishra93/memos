@@ -43,27 +43,57 @@ const memo: Memo = {
 
     market: {
       samTopDown: [
-        { type: "text", text: "OpenEvidence's current product suite draws from existing budgets for:" },
-        { type: "list", items: [
-          "Medical training refresher courses",
-          "Conference attendance",
-          "Subscriptions to medical databases",
-          "Subscriptions to medical journals",
-        ]},
-        { type: "text", text: "This represents about **$6B** of spend, growing ~11% over next 5 years." },
-        { type: "text", text: "OpenEvidence also monetizes off of ad spend from pharmaceutical companies. This budget — US only — is **$15B+**." },
+        {
+          label: "Existing budget",
+          blocks: [
+            { type: "text", text: "OpenEvidence's current product suite draws from existing budgets for:" },
+            { type: "list", items: [
+              "Medical training refresher courses",
+              "Conference attendance",
+              "Subscriptions to medical databases",
+              "Subscriptions to medical journals",
+            ]},
+            { type: "text", text: "This represents about **$6B** of spend, growing ~11% over next 5 years." },
+          ],
+        },
+        {
+          label: "Pharma advertising",
+          blocks: [
+            { type: "text", text: "OpenEvidence also monetizes off of ad spend from pharmaceutical companies. This budget — US only — is **$15B+**." },
+          ],
+        },
       ],
       samBottomUp: [
-        { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
-        { type: "text", text: "A remarkable organic penetration rate for a product with no enterprise sales motion." },
+        {
+          label: "US physician base",
+          blocks: [
+            { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
+            { type: "text", text: "A remarkable organic penetration rate for a product with no enterprise sales motion." },
+          ],
+        },
       ],
       tamTopDown: [
-        { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (notes) and Doctor Dialer (telemedicine), it will expand $ per physician toward the ~$20K/year currently captured by EHR vendors." },
-        { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability." },
+        {
+          label: "EHR displacement",
+          blocks: [
+            { type: "text", text: "As OE deepens workflow penetration via OpenEvidence Visits (notes) and Doctor Dialer (telemedicine), it will expand $ per physician toward the ~$20K/year currently captured by EHR vendors." },
+          ],
+        },
+        {
+          label: "Malpractice upside",
+          blocks: [
+            { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability." },
+          ],
+        },
       ],
       tamBottomUp: [
-        { type: "text", text: "Clear interest from UK and European physicians — ~12M physicians globally represents a 12x expansion on the current US addressable base." },
-        { type: "text", text: "Adjacent user groups add further scale: nurses, PAs, medical students, pharmacists. There are ~5M nurses in the US alone." },
+        {
+          label: "Global & adjacent",
+          blocks: [
+            { type: "text", text: "Clear interest from UK and European physicians — ~12M physicians globally represents a 12x expansion on the current US addressable base." },
+            { type: "text", text: "Adjacent user groups add further scale: nurses, PAs, medical students, pharmacists. There are ~5M nurses in the US alone." },
+          ],
+        },
       ],
       tailwinds: [
         "Physicians are in a capacity-constrained labor pool with acute time pressure — any tool that compresses the time-to-answer on a clinical question has immediate, compounding value.",

@@ -43,6 +43,8 @@ export type ContentBlock =
   | { type: "text"; text: string }
   | { type: "list"; items: string[] };
 
+export type MarketCard = { label: string; blocks: ContentBlock[] };
+
 export interface RichMemoContent {
   thesis: {
     overview: string;
@@ -52,10 +54,10 @@ export interface RichMemoContent {
     keyStats: { label: string; value: string }[];
   };
   market: {
-    samTopDown: ContentBlock[];
-    samBottomUp: ContentBlock[];
-    tamTopDown: ContentBlock[];
-    tamBottomUp: ContentBlock[];
+    samTopDown: MarketCard[];
+    samBottomUp: MarketCard[];
+    tamTopDown: MarketCard[];
+    tamBottomUp: MarketCard[];
     tailwinds: string[];
     competition: { category: string; competitors: string; reasonToWin: string }[];
     gtm: string;

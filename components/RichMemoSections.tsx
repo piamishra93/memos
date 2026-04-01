@@ -1,4 +1,4 @@
-import { RichMemoContent, ContentBlock } from "@/data/types";
+import { RichMemoContent, ContentBlock, MarketCard } from "@/data/types";
 
 export function ThesisSection({ data }: { data: RichMemoContent["thesis"] }) {
   return (
@@ -35,18 +35,18 @@ export function MarketSection({ data }: { data: RichMemoContent["market"] }) {
         {/* SAM / TAM top-down */}
         <div>
           <Subhead>Top-down sizing</Subhead>
-          <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
-            <SizeCard label="SAM" blocks={data.samTopDown} />
-            <SizeCard label="TAM" blocks={data.tamTopDown} />
+          <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+            <MarketColumn label="SAM" cards={data.samTopDown} />
+            <MarketColumn label="TAM" cards={data.tamTopDown} />
           </div>
         </div>
 
         {/* SAM / TAM bottom-up */}
         <div>
           <Subhead>Bottom-up sizing</Subhead>
-          <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
-            <SizeCard label="SAM" blocks={data.samBottomUp} />
-            <SizeCard label="TAM" blocks={data.tamBottomUp} />
+          <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+            <MarketColumn label="SAM" cards={data.samBottomUp} />
+            <MarketColumn label="TAM" cards={data.tamBottomUp} />
           </div>
         </div>
 
@@ -213,7 +213,18 @@ function Subhead({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SizeCard({ label, blocks }: { label: string; blocks: ContentBlock[] }) {
+function MarketColumn({ label, cards }: { label: string; cards: MarketCard[] }) {
+  return (
+    <div className="space-y-3">
+      <p className="font-mono text-xs text-muted tracking-widest uppercase">{label}</p>
+      {cards.map((card) => (
+        <SubCard key={card.label} label={card.label} blocks={card.blocks} />
+      ))}
+    </div>
+  );
+}
+
+function SubCard({ label, blocks }: { label: string; blocks: ContentBlock[] }) {
   return (
     <div className="border border-ink/10 p-4 space-y-3">
       <p className="font-mono text-xs text-muted tracking-widest uppercase">{label}</p>
