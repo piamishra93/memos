@@ -309,8 +309,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
         </div>
         <p className="font-mono text-xs text-muted mt-6">
           Entry: ${entryValuationB}B valuation ·{" "}
-          {(entryValuationB * 1000 / entryRow.totalARR).toFixed(0)}× {model.entryYear} ARR ·{" "}
-          MoM based on portfolio-level entry/exit
+          {(entryValuationB * 1000 / entryRow.totalARR).toFixed(0)}× {model.entryYear} ARR
         </p>
       </div>
     </div>
