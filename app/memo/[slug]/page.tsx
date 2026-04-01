@@ -147,7 +147,7 @@ export default async function MemoPage({
       {/* Footer */}
       <div className="mt-20 pt-8 border-t border-ink/10">
         <p className="font-mono text-xs text-muted">
-          Pia Mishra · {memo.date} · Not financial advice
+          Pia Mishra · {memo.date}
         </p>
       </div>
     </main>
