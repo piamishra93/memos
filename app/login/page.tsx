@@ -36,16 +36,6 @@ function LoginForm() {
   return (
     <main className="min-h-screen bg-paper flex items-center justify-center px-6">
       <div className="w-full max-w-sm">
-        <p className="font-mono text-xs text-muted tracking-widest uppercase mb-6">
-          Investment Memos
-        </p>
-        <h1
-          className="font-serif text-4xl font-medium mb-10"
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
-          Private access
-        </h1>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="font-mono text-xs text-muted tracking-widest uppercase block mb-3">
@@ -56,8 +46,7 @@ function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoFocus
-              className="w-full bg-transparent border-b border-ink/30 focus:border-ink outline-none font-mono text-sm py-2 transition-colors placeholder:text-muted/40"
-              placeholder="enter password"
+              className="w-full bg-transparent border-b border-ink/30 focus:border-ink outline-none font-mono text-sm py-2 transition-colors"
             />
             {error && (
               <p className="font-mono text-xs text-muted mt-3">
