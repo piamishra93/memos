@@ -75,7 +75,7 @@ const memo: Memo = {
         {
           label: "Malpractice upside",
           blocks: [
-            { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability." },
+            { type: "text", text: "Net-new spend could eventually be unlocked if OE demonstrably reduces misdiagnoses and associated malpractice liability — the average medical malpractice settlement is ~$425K." },
           ],
         },
       ],
