@@ -107,7 +107,7 @@ const memo: Memo = {
         {
           category: "EHR systems",
           competitors: "Epic, Cerner, Meditech",
-          reasonToWin: "Decades-old technology built for billing and administrative compliance, not clinical care. OE is the first AI-native clinical layer with the physician trust and workflow surface area to credibly displace legacy EHR spend — starting bottoms-up where incumbents have no answer.",
+          reasonToWin: "Decades-old technology built for billing and administrative compliance, not clinical care.",
         },
         {
           category: "Subscription databases",
