@@ -100,7 +100,7 @@ const memo: Memo = {
         },
       ],
       tailwinds: [
-        "Physicians are in a capacity-constrained labor pool with acute time pressure — any tool that compresses the time-to-answer on a clinical question has immediate, compounding value.",
+        "Physicians are in a capacity-constrained labor pool with acute time pressure — any tool that shortens the time-to-answer on a clinical question has immediate, compounding value.",
         "Medical knowledge is updating faster than ever: digitisation of health records, device-driven data collection, accelerated publishing cycles, and AI-led research are all compressing the half-life of clinical training.",
       ],
       competition: [
