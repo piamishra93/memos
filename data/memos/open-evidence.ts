@@ -38,7 +38,7 @@ const memo: Memo = {
         { label: "Consults / day", value: "~1M" },
         { label: "US physician penetration", value: "~40%" },
         { label: "FTE on $50M+ ARR", value: "<50" },
-        { label: "Entry valuation", value: "$12B" },
+        { label: "Base case MOIC", value: "4.0x" },
       ],
     },
 
