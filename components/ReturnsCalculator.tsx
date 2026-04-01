@@ -117,7 +117,7 @@ export default function ReturnsCalculator({ data }: ReturnsProps) {
         <OutputCard
           label="IRR"
           value={irrLabel}
-          sub={`${moicLabel} MOIC`}
+          sub={`${moicLabel} MoM`}
         />
       </div>
 

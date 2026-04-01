@@ -284,7 +284,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
             sub={`vs. $${entryValuationB}B entry`}
           />
           <OutputCard
-            label="MOIC / IRR"
+            label="MoM / IRR"
             value={`${moic.toFixed(1)}× / ${(irr * 100).toFixed(0)}%`}
             sub={`${holdYears}-year hold`}
           />
@@ -292,7 +292,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
         <p className="font-mono text-xs text-muted mt-6">
           Entry: ${entryValuationB}B valuation ·{" "}
           {(entryValuationB * 1000 / entryRow.totalARR).toFixed(0)}× {model.entryYear} ARR ·{" "}
-          MOIC based on portfolio-level entry/exit
+          MoM based on portfolio-level entry/exit
         </p>
       </div>
     </div>
