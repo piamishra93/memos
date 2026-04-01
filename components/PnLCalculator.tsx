@@ -19,6 +19,7 @@ function buildModel(
     otherMPs: number;
     consultsMM: number;
     dollarPerConsult: number;
+    subPerProvider: number; // $/provider/year
     consultRev: number;  // $M
     cmeRev: number;      // $M
     adRev: number;       // $M
@@ -28,19 +29,22 @@ function buildModel(
   const rows: YearRow[] = [];
 
   // Base year (fixed — no sliders affect 2025)
+  const baseConsultRev = base.consultsMM * base.dollarPerConsult;
+  const baseCmeRev = (base.licensedPhysicians * base.cmePerPhysician) / 1e6;
+  const baseAdRev = ((base.licensedPhysicians + base.otherMPs) * base.adsPerPhysician) / 1e6;
+  const baseTotalARR = baseConsultRev + baseCmeRev + baseAdRev;
   rows.push({
     year: 2025,
     licensed: base.licensedPhysicians,
     otherMPs: base.otherMPs,
     consultsMM: base.consultsMM,
     dollarPerConsult: base.dollarPerConsult,
-    consultRev: base.consultsMM * base.dollarPerConsult,
-    cmeRev: (base.licensedPhysicians * base.cmePerPhysician) / 1e6,
-    adRev: ((base.licensedPhysicians + base.otherMPs) * base.adsPerPhysician) / 1e6,
-    totalARR: 0,
+    subPerProvider: (baseTotalARR * 1e6) / (base.licensedPhysicians + base.otherMPs),
+    consultRev: baseConsultRev,
+    cmeRev: baseCmeRev,
+    adRev: baseAdRev,
+    totalARR: baseTotalARR,
   });
-  rows[0].totalARR =
-    rows[0].consultRev + rows[0].cmeRev + rows[0].adRev;
 
   // Projected years
   for (let i = 0; i < projectedYears.length; i++) {
@@ -61,6 +65,7 @@ function buildModel(
     const cmeRev = (licensed * base.cmePerPhysician) / 1e6;
     const adRev = ((licensed + otherMPs) * base.adsPerPhysician) / 1e6;
     const totalARR = consultRev + cmeRev + adRev;
+    const subPerProvider = (totalARR * 1e6) / (licensed + otherMPs);
 
     rows.push({
       year: projectedYears[i],
@@ -68,6 +73,7 @@ function buildModel(
       otherMPs,
       consultsMM,
       dollarPerConsult,
+      subPerProvider,
       consultRev,
       cmeRev,
       adRev,
@@ -97,6 +103,11 @@ function fmtRevM(m: number) {
 
 function fmtDPC(v: number) {
   return `$${v.toFixed(2)}`;
+}
+
+function fmtSub(v: number) {
+  if (v >= 1000) return `$${(v / 1000).toFixed(1)}K`;
+  return `$${Math.round(v)}`;
 }
 
 // ─── Component ──────────────────────────────────────────────────────────────
@@ -219,6 +230,10 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
             <Row
               label="$ / consult"
               values={rows.map((r) => fmtDPC(r.dollarPerConsult))}
+            />
+            <Row
+              label="$ subscription / provider"
+              values={rows.map((r) => fmtSub(r.subPerProvider))}
             />
 
             {/* Revenue */}
