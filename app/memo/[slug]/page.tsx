@@ -80,7 +80,7 @@ export default async function MemoPage({
       {rc ? (
         <>
           <div className="border-t border-ink/10 mb-4" />
-          <nav className="flex flex-wrap justify-center items-center gap-x-3 font-mono text-xs tracking-widest uppercase text-muted mb-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-6 font-mono text-xs tracking-widest uppercase text-muted mb-4">
             {RICH_NAV.map((s, i) => (
               <>
                 {i > 0 && <span key={`dot-${i}`} className="text-ink/20">·</span>}
