@@ -64,7 +64,7 @@ export default async function MemoPage({
       </Link>
 
       {/* Header */}
-      <div className="mt-2 mb-8">
+      <div className="mt-2 mb-12">
         <h1
           className="font-serif text-5xl font-medium leading-tight mb-4 typewriter cursor"
           style={{ fontFamily: "var(--font-playfair)" }}
@@ -79,8 +79,8 @@ export default async function MemoPage({
       {/* Section nav — rich memos only */}
       {rc ? (
         <>
-          <div className="border-t border-ink/10 mb-4" />
-          <nav className="flex flex-wrap justify-center items-center gap-x-6 font-mono text-xs tracking-widest uppercase text-muted mb-4">
+          <div className="border-t border-ink/10 mb-6" />
+          <nav className="flex flex-wrap justify-center items-center gap-x-6 font-mono text-xs tracking-widest uppercase text-muted mb-6">
             {RICH_NAV.map((s, i) => (
               <>
                 {i > 0 && <span key={`dot-${i}`} className="text-ink/20">·</span>}
@@ -90,7 +90,7 @@ export default async function MemoPage({
               </>
             ))}
           </nav>
-          <div className="border-t border-ink/10 mb-12" />
+          <div className="border-t border-ink/10 mb-20" />
         </>
       ) : (
         <div className="border-t border-ink/10 mb-12" />
