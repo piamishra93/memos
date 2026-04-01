@@ -335,25 +335,40 @@ function SliderRow({
   step: number;
   onChange: (v: number) => void;
 }) {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const pct = (value - min) / (max - min);
+
   return (
     <div>
-      <div className="flex items-start justify-between mb-1">
-        <span className="font-mono text-xs text-muted tracking-wide uppercase">
-          {label}
-        </span>
-        <span className="font-mono text-xs font-medium text-ink text-right ml-4 shrink-0">
-          {display}
-        </span>
+      <span className="font-mono text-xs text-muted tracking-wide uppercase">
+        {label}
+      </span>
+      <div className="relative mt-3">
+        {showTooltip && (
+          <div
+            className="absolute bottom-full mb-2 font-mono text-xs text-ink bg-paper border border-ink/10 px-2 py-1 whitespace-nowrap pointer-events-none"
+            style={{
+              left: `calc(${pct * 100}% + ${(0.5 - pct) * 16}px)`,
+              transform: "translateX(-50%)",
+            }}
+          >
+            {display}
+          </div>
+        )}
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={(e) => onChange(parseFloat(e.target.value))}
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+          onFocus={() => setShowTooltip(true)}
+          onBlur={() => setShowTooltip(false)}
+          className="w-full"
+        />
       </div>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full mt-2"
-      />
     </div>
   );
 }
