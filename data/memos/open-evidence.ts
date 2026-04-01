@@ -33,7 +33,7 @@ const memo: Memo = {
       whyNow:
         "LLMs crossed a threshold where real-time, high accuracy, clinical reasoning is possible. Healthcare has been hard to disrupt because need for accurate data, and high trust, was paramount — this protected incumbents. OE's early traction and recent enterprise deployments suggest a credible break-out driven by product innovation and bottoms up distribution.",
       team:
-        "Daniel is a repeat founder (Kensho) and has intentionally built a technically rigorous, academically oriented execution culture — which is crucial for OpenEvidence credibility.",
+        "CEO Daniel Nadler is a repeat founder. His prior company, Kensho, was an AI tool for financial services that sold to S&P. Daniel has intentionally built a technically rigorous, academically oriented execution culture — which has been crucial for OpenEvidence credibility.",
       keyStats: [
         { label: "Consults / day", value: "~1M" },
         { label: "US physician penetration", value: "~40%" },
