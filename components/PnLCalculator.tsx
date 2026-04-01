@@ -19,7 +19,8 @@ function buildModel(
     otherMPs: number;
     consultsMM: number;
     dollarPerConsult: number;
-    subPerProvider: number; // $/provider/year
+    consultsPerPhysician: number;
+    subPerPhysician: number; // $/licensed physician/year
     consultRev: number;  // $M
     cmeRev: number;      // $M
     adRev: number;       // $M
@@ -39,7 +40,8 @@ function buildModel(
     otherMPs: base.otherMPs,
     consultsMM: base.consultsMM,
     dollarPerConsult: base.dollarPerConsult,
-    subPerProvider: (baseTotalARR * 1e6) / (base.licensedPhysicians + base.otherMPs),
+    consultsPerPhysician: (base.consultsMM * 1e6) / base.licensedPhysicians,
+    subPerPhysician: (baseTotalARR * 1e6) / base.licensedPhysicians,
     consultRev: baseConsultRev,
     cmeRev: baseCmeRev,
     adRev: baseAdRev,
@@ -65,7 +67,8 @@ function buildModel(
     const cmeRev = (licensed * base.cmePerPhysician) / 1e6;
     const adRev = ((licensed + otherMPs) * base.adsPerPhysician) / 1e6;
     const totalARR = consultRev + cmeRev + adRev;
-    const subPerProvider = (totalARR * 1e6) / (licensed + otherMPs);
+    const consultsPerPhysician = (consultsMM * 1e6) / licensed;
+    const subPerPhysician = (totalARR * 1e6) / licensed;
 
     rows.push({
       year: projectedYears[i],
@@ -73,7 +76,8 @@ function buildModel(
       otherMPs,
       consultsMM,
       dollarPerConsult,
-      subPerProvider,
+      consultsPerPhysician,
+      subPerPhysician,
       consultRev,
       cmeRev,
       adRev,
@@ -228,12 +232,13 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
               highlight={consultScalar !== 1.0}
             />
             <Row
-              label="$ / consult"
-              values={rows.map((r) => fmtDPC(r.dollarPerConsult))}
+              label="Consults / physician"
+              values={rows.map((r) => Math.round(r.consultsPerPhysician).toLocaleString())}
+              highlight={consultScalar !== 1.0}
             />
             <Row
-              label="$ subscription / provider"
-              values={rows.map((r) => fmtSub(r.subPerProvider))}
+              label="$ subscription / physician"
+              values={rows.map((r) => fmtSub(r.subPerPhysician))}
             />
 
             {/* Revenue */}
