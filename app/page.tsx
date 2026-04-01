@@ -6,7 +6,7 @@ export default function Home() {
     <main className="max-w-2xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="mb-16">
-        <h1 className="font-mono text-3xl font-medium tracking-widest uppercase">
+        <h1 className="font-mono text-3xl font-normal tracking-widest uppercase">
           Investment Memos
         </h1>
       </div>
@@ -30,7 +30,7 @@ export default function Home() {
                   <h2 className="font-serif text-xl font-medium group-hover:underline underline-offset-2">
                     {memo.company}
                   </h2>
-                  <p className="font-mono text-xs text-muted mt-1">
+                  <p className="font-mono text-xs text-muted tracking-widest uppercase mt-1">
                     {memo.sector} · {memo.stage} · {memo.date}
                   </p>
                   <p className="font-serif text-sm text-muted italic mt-2">
