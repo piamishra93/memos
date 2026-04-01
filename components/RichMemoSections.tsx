@@ -219,7 +219,13 @@ function SizeCard({ label, blocks }: { label: string; blocks: ContentBlock[] }) 
       <p className="font-mono text-xs text-muted tracking-widest uppercase">{label}</p>
       {blocks.map((block, i) =>
         block.type === "text" ? (
-          <p key={i} className="font-serif text-sm leading-relaxed text-ink/80">{block.text}</p>
+          <p key={i} className="font-serif text-sm leading-relaxed text-ink/80">
+            {block.text.split(/(\*\*[^*]+\*\*)/).map((part, j) =>
+              part.startsWith("**") ? (
+                <strong key={j} className="font-semibold text-ink">{part.slice(2, -2)}</strong>
+              ) : part
+            )}
+          </p>
         ) : (
           <ul key={i} className="space-y-1">
             {block.items.map((item, j) => (

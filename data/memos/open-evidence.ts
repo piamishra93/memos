@@ -50,8 +50,8 @@ const memo: Memo = {
           "Subscriptions to medical databases",
           "Subscriptions to medical journals",
         ]},
-        { type: "text", text: "This represents about $6B of spend, growing ~11% over next 5 years." },
-        { type: "text", text: "OpenEvidence also monetizes off of ad spend from pharmaceutical companies. The total budget (US only) is about $14B." },
+        { type: "text", text: "This represents about **$6B** of spend, growing ~11% over next 5 years." },
+        { type: "text", text: "OpenEvidence also monetizes off of ad spend from pharmaceutical companies. This budget — US only — is **$15B+**." },
       ],
       samBottomUp: [
         { type: "text", text: "There are just over 1M licensed physicians in the US. As of mid-2025, ~40% were active on the OE Q&A platform." },
