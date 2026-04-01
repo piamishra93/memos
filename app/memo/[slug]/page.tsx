@@ -130,7 +130,7 @@ export default async function MemoPage({
             </p>
             <div className="border border-ink/10 p-6">
               <p className="font-mono text-xs text-muted tracking-widest uppercase mb-6">
-                Returns model — flex the assumptions
+                Returns model
               </p>
               {memo.pnlModel ? (
                 <PnLCalculator model={memo.pnlModel} />

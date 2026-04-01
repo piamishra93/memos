@@ -145,8 +145,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
       {/* ── Sliders ── */}
       <div className="space-y-7">
         <SliderRow
-          label="Physician adoption"
-          sublabel="Growth rate scalar vs. base case"
+          label="Physician penetration rate"
           value={physicianScalar}
           display={`${physicianScalar.toFixed(2)}× — ${fmtK(exitRow.licensed)} physicians by ${model.exitYear}`}
           min={model.ranges.physicianPenetration.min}
@@ -155,8 +154,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
           onChange={setPhysicianScalar}
         />
         <SliderRow
-          label="Consult growth"
-          sublabel="Volume multiplier scalar vs. base case"
+          label="Consult coverage growth rate"
           value={consultScalar}
           display={`${consultScalar.toFixed(2)}× — ${fmtConsults(exitRow.consultsMM)} consults by ${model.exitYear}`}
           min={model.ranges.consultGrowth.min}
@@ -165,8 +163,7 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
           onChange={setConsultScalar}
         />
         <SliderRow
-          label="Exit multiple"
-          sublabel="ARR multiple at exit"
+          label="ARR multiple at exit"
           value={exitMultiple}
           display={`${exitMultiple}× ARR`}
           min={model.ranges.exitMultiple.min}
@@ -324,7 +321,6 @@ export default function PnLCalculator({ model }: { model: PnLModel }) {
 
 function SliderRow({
   label,
-  sublabel,
   value,
   display,
   min,
@@ -333,7 +329,6 @@ function SliderRow({
   onChange,
 }: {
   label: string;
-  sublabel: string;
   value: number;
   display: string;
   min: number;
@@ -344,14 +339,9 @@ function SliderRow({
   return (
     <div>
       <div className="flex items-start justify-between mb-1">
-        <div>
-          <span className="font-mono text-xs text-muted tracking-wide uppercase">
-            {label}
-          </span>
-          <span className="font-mono text-xs text-muted/60 ml-2 normal-case">
-            {sublabel}
-          </span>
-        </div>
+        <span className="font-mono text-xs text-muted tracking-wide uppercase">
+          {label}
+        </span>
         <span className="font-mono text-xs font-medium text-ink text-right ml-4 shrink-0">
           {display}
         </span>
