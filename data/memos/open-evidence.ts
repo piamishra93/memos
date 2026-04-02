@@ -111,7 +111,7 @@ const memo: Memo = {
         },
         {
           category: "Subscription databases",
-          competitors: "UpToDate, Dynamed, Medscape, Amboss",
+          competitors: "UpToDate, Dynamed, Medscape, Amboss, Doximity",
           reasonToWin: "More robust, continuously updated data source — legacy tools are slow to incorporate new evidence.",
         },
         {
